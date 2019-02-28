@@ -64,6 +64,9 @@ void circle_para(int const x, int const y, int const n, double const pi){
 }
 
 void main(){
+  //cout << "How many pixels wide would you like your clock window to be?" << " (Around 350 is a good pick)" << endl;
+  //int const x = read_double();
+  //int const y = 2*x
 	int const x = 300;                                                                   //defines window size in x direction
 	int const y = 600;                                                                   //degines window size in y direction
 	int const n = 360;
