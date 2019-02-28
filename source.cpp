@@ -3,7 +3,7 @@
 int hour(){
 	return(get_clock_time() / 10000);
 }
-  
+
 int minute(){
 	return((get_clock_time() % 10000) / 100);
 }
@@ -112,6 +112,7 @@ void clock_hands_refresh(int const x, int const y, bool const timeON){          
     draw_distance(second_hand_length());
     set_pen_color(color::white);
     draw_distance(second_hand_length());
+    set_pen_color(color::black);
   }
     if (timeOn==1){
       move_to(x/2.0,y/2.0);
@@ -119,10 +120,11 @@ void clock_hands_refresh(int const x, int const y, bool const timeON){          
       draw_distance(minute_hand_length());
       set_pen_color(color::white);
       draw_distance(minute_hand_length());
+      set_pen_color(color::black);
     }
       if (timeON==1){
         move_to(x/2.0,y/2.0);
-        turn_right_by_degrees(angle_of_hour_hand());
+        turn_right_by_degrees(angle_for_hour_hand());
         draw_distance(hour_hand_length())
         set_pen_color(color::white);
         draw_distance(hour_hand_length())
