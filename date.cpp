@@ -62,7 +62,7 @@ void time(){
   cout << "time: " << fixed_hour() << ":" << fixed_minute();
 }
 
-void date_word(){
+void date_word(string const monthab[11]){
   cout << "month in words: " << monthab[month_array_value()];
 }
 
